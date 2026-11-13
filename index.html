@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#0a1224">
+  <title>Padel Americano</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22%3E%3Ctext y=%22.9em%22 font-size=%2290%22%3E🎾%3C/text%3E%3C/svg%3E">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="app-header">
+    <h1>Padel Americano</h1>
+    <button type="button" id="reset-btn" class="btn-ghost">New Session</button>
+  </header>
+
+  <main id="main" tabindex="-1"></main>
+
+  <nav class="bottom-nav" aria-label="Main">
+    <div class="nav-inner">
+      <button type="button" class="nav-btn" data-view="current">
+        <span class="nav-icon" aria-hidden="true">▶</span>
+        <span class="nav-label" id="nav-current-label">Current Game</span>
+      </button>
+      <button type="button" class="nav-btn" data-view="standings">
+        <span class="nav-icon" aria-hidden="true">🏆</span>
+        <span class="nav-label">Standings</span>
+      </button>
+      <button type="button" class="nav-btn" data-view="games">
+        <span class="nav-icon" aria-hidden="true">☰</span>
+        <span class="nav-label">Games</span>
+      </button>
+    </div>
+  </nav>
+
+  <div id="announcer" class="sr-only" aria-live="polite"></div>
+  <div id="modal-root"></div>
+
+  <noscript><p style="padding:16px">This app needs JavaScript enabled.</p></noscript>
+
+  <script src="logic.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
